@@ -1,0 +1,142 @@
+/* ================= ABOUT PAGE ================= */
+
+.about-hero {
+  width: 100%;
+  min-height: 50vh;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.about-hero h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.about-hero p {
+  max-width: 700px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Who we are */
+.about-section {
+  padding: 80px 60px;
+  text-align: center;
+  background: #f5f7fb;
+}
+
+.about-section h2 {
+  color: #4f46e5;
+  margin-bottom: 20px;
+}
+
+.about-text {
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: 17px;
+  line-height: 1.8;
+  color: #374151;
+}
+
+/* Mission / Vision / Values */
+.about-cards {
+  padding: 80px 60px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  background: #ffffff;
+}
+
+.about-card {
+  background: #f9fafb;
+  padding: 30px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.about-card h3 {
+  color: #4f46e5;
+  margin-bottom: 12px;
+}
+/* Container for the video on the right */
+/* Ensure the hero section uses Flexbox for the split layout */
+.about-hero-split {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 10%; /* Adjusts the side spacing */
+  min-height: 80vh;
+  gap: 40px;
+}
+
+/* Forces text to align left and not take up too much space */
+.left-align {
+  text-align: left !important;
+  margin: 0 !important;
+  flex: 1;
+}
+
+/* The Container for your video */
+.hero-animation-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+
+/* Styling the video element itself */
+.main-video-element {
+  width: 100%;
+  max-width: 500px; /* Limits how big the video gets */
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  /* Optional: adds a slight floating animation to the video */
+  animation: floatVideo 5s ease-in-out infinite;
+}
+
+@keyframes floatVideo {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Mobile Responsiveness: Stack them vertically on small screens */
+@media (max-width: 900px) {
+  .about-hero-split {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 5%;
+  }
+
+  .left-align {
+    text-align: center !important;
+    margin-bottom: 30px !important;
+  }
+
+  .main-video-element {
+    max-width: 100%;
+  }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .about-hero-split {
+    flex-direction: column;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  .left-align {
+    text-align: center !important;
+  }
+  .main-video-element {
+    margin-top: 30px;
+  }
+}

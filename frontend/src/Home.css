@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: #f7fbff;
+  color: #222;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background: white;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1e6fd9;
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #444;
+  font-weight: 500;
+}
+
+.btn-login {
+  padding: 10px 20px;
+  background: #1e6fd9;
+  color: white;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Hero */
+.hero {
+  padding: 100px 60px;
+  background: linear-gradient(135deg, #eaf4ff, #ffffff);
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 25px;
+}
+
+.search-box {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+}
+
+.search-box input {
+  flex: 1;
+  padding: 18px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.search-box button {
+  padding: 18px 30px;
+  background: #1e6fd9;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 0 12px 12px 0;
+}
+
+/* Sections */
+.section {
+  padding: 60px;
+}
+
+.section h2 {
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+/* Categories */
+.categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  font-weight: 600;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* Services */
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.service-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.service-card img {
+  width: 100%;
+}
+
+.service-card h3 {
+  padding: 15px;
+  font-size: 18px;
+}
+
+.service-card p {
+  padding: 0 15px;
+  color: #666;
+}
+
+.service-card span {
+  display: block;
+  padding: 15px;
+  font-weight: 700;
+  color: #1e6fd9;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: white;
+  color: #777;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+}
+
+  .search-box {
+    flex-direction: column;
+  }
+
+  .search-box button {
+    border-radius: 0 0 12px 12px;
+  }

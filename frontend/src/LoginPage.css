@@ -1,0 +1,162 @@
+/* ================= GLOBAL PAGE SETTINGS ================= */
+.login-page {
+  background-color: #0a1929;
+  background-image: linear-gradient(rgba(10, 25, 41, 0.9), rgba(10, 25, 41, 0.9)), 
+                    url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop');
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+}
+
+/* ================= NAVBAR (Glass Effect) ================= */
+.navbar {
+  width: 100%;
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.02);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #1dbf73; /* Emerald Accent */
+  letter-spacing: 1px;
+}
+
+.nav-links .no-link-style {
+  color: #94a3b8;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
+
+.nav-links .no-link-style:hover {
+  color: #1dbf73;
+}
+
+/* ================= LOGIN CONTAINER (Glassmorphism) ================= */
+.login-container {
+  margin: auto; /* Centers vertically in the flex column */
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 50px;
+  border-radius: 24px;
+  width: 100%;
+  max-width: 450px;
+  text-align: center;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.login-container h2 {
+  font-size: 2rem;
+  color: #1dbf73;
+  margin-bottom: 10px;
+}
+
+.login-container p {
+  color: #94a3b8;
+  margin-bottom: 30px;
+  font-size: 0.95rem;
+}
+
+/* ================= FORM INPUTS ================= */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.login-form input {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s;
+}
+
+.login-form input:focus {
+  border-color: #1dbf73;
+  background: rgba(29, 191, 115, 0.05);
+}
+
+/* ================= ACTION BUTTONS ================= */
+.login-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+/* Admin Button (Solid Emerald) */
+.admin-btn {
+  background: #1dbf73;
+  color: #0a1929;
+  border: none;
+  padding: 14px;
+  border-radius: 12px;
+  font-weight: 800;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+
+.admin-btn:hover {
+  background: #17a363;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(29, 191, 115, 0.2);
+}
+
+/* User Button (Outline Style) */
+.user-btn {
+  background: transparent;
+  color: #1dbf73;
+  border: 2px solid #1dbf73;
+  padding: 14px;
+  border-radius: 12px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.user-btn:hover {
+  background: rgba(29, 191, 115, 0.1);
+}
+
+/* ================= FOOTER & LINKS ================= */
+.login-footer {
+  margin-top: 25px;
+  font-size: 0.9rem;
+  color: #94a3b8 !important;
+}
+
+.register-link {
+  color: #1dbf73;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.register-link:hover {
+  text-decoration: underline;
+}
+
+.footer {
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  color: #64748b;
+  font-size: 0.85rem;
+  background: rgba(10, 25, 41, 0.5);
+  margin-top: auto;
+}

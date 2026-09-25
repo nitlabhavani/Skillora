@@ -1,0 +1,342 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Times New Roman", Times, serif;
+  
+}
+
+/* ================= LAYOUT ================= */
+/* ================= UPDATED HOME BACKGROUND ================= */
+.homepage {
+  width: 100%;
+  min-height: 100vh;
+  /* Applying the space background from the Pay page */
+  background-color: #0a1929;
+  background-image: linear-gradient(rgba(10, 25, 41, 0.9), rgba(10, 25, 41, 0.9)), 
+                    url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop');
+  background-size: cover;
+  background-attachment: fixed;
+  color: #ffffff;
+}
+
+/* ================= NAVBAR (Glass Effect) ================= */
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background: rgba(255, 255, 255, 0.03) !important; /* Transparent glass */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: none;
+}
+
+.logo-text {
+  color: #ffffff !important; /* Changed from dark to white */
+}
+
+.nav-links a {
+  color: #e5e7eb !important; /* Soft white links */
+}
+
+/* ================= STATS & FEATURES (Glass Cards) ================= */
+.stats {
+  background: transparent !important; /* Let background show through */
+}
+
+.stat-card, .feature-card {
+  background: rgba(255, 255, 255, 0.05) !important; /* Glass card */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ffffff !important;
+}
+
+.stat-card h3, .features h2, .how-it-works h2 {
+  color: #1dbf73 !important; /* Emerald green accent from Pay page */
+}
+
+.stat-card p, .feature-card p, .step span {
+  color: #94a3b8 !important; /* Slate gray text */
+}
+
+/* ================= CATEGORIES (emerald accent) ================= */
+.category-card {
+  background: rgba(29, 191, 115, 0.1) !important;
+  border: 1px solid #1dbf73;
+  color: #ffffff;
+}
+
+/* ================= BUTTONS (consistent with pay page) ================= */
+.btn-primary {
+  background: #1dbf73 !important;
+  color: #0a1929 !important;
+  font-weight: 800;
+}
+
+.btn-outline {
+  border-color: #1dbf73 !important;
+  color: #1dbf73 !important;
+}
+
+/* ================= BRAND LOGO ================= */
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 26px;
+  font-weight: 800;
+}
+
+.logo-icon {
+  width: 38px;
+  height: 38px;
+  background: linear-gradient(135deg, #1dbf73,#1dbf73);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.logo-text {
+  color: #1f2937;
+}
+
+.logo-accent {
+  color: #1dbf73;
+}
+
+.homepage.dark .logo-text {
+  color: #e5e7eb;
+}
+
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #0d0d0e;
+  font-weight: 500;
+}
+
+/* ================= BUTTONS ================= */
+.btn-primary {
+  background:#1dbf73;
+  color: white;
+  padding: 10px 22px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-outline {
+  background: transparent;
+  color: #ffffff;
+  padding: 10px 22px;
+  border-radius: 8px;
+  border: 2px solid #ffffff;
+  cursor: pointer;
+}
+
+/* ================= HERO ================= */
+/* ================= HERO VIDEO FIX ================= */
+
+.video-hero {
+  position: relative;
+  width: 100%;
+  min-height: 80vh;
+  overflow: hidden;
+}
+
+/* Video full background */
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* Dark overlay for readability */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 2;
+}
+
+/* Center text ON video */
+/* Ensure the parent container takes up the full screen and centers content */
+.hero {
+  display: flex;
+  justify-content: center; /* Horizontal center */
+  align-items: center;     /* Vertical center */
+  min-height: 100vh;       /* Full screen height */
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background-color: #0a1929; /* Matching your theme */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  max-width: 900px;
+  /* Removed max-height to allow natural centering */
+  text-align: center;
+  color: white;
+  padding: 20px;
+  /* Ensure it sits in the middle of its parent */
+  margin: auto; 
+}
+
+/* Text sizes */
+.hero-content h1 {
+  font-size: 56px;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.hero-content p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #94a3b8; /* Matching your admin text color */
+}
+
+/* Center buttons */
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+/* ================= STATS ================= */
+.stats {
+  width: 100%;
+  padding: 70px 60px;
+  background-color: #ffffff;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  text-align: center;
+  color: #4f46e5;
+}
+
+.stat-card {
+  background: #f9fafb;
+  padding: 35px 20px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.stat-card h3 {
+  font-size: 36px;
+  color: #1dbf73;
+}
+
+.stat-card p {
+  color: #374151;
+}
+/* ================= FEATURES ================= */
+.features {
+  padding: 80px 60px;
+  text-align: center;
+  background: #f5f7fb;
+  color: #1dbf73;
+}
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+  color: #374151;
+}
+.feature-card {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+/* ================= CATEGORIES ================= */
+.categories {
+  padding: 80px 60px;
+  text-align: center;
+}
+.categories h2 {
+  color: #1dbf73;
+}
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+.category-card {
+  background: lightslategrey;
+  color: white;
+  padding: 30px;
+  border-radius: 12px;
+}
+/* ================= HOW IT WORKS ================= */
+/* HOW IT WORKS */
+.how-it-works {
+    padding: 60px;
+    text-align: center;
+    color:#1dbf73;
+}
+.steps {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+.step span {
+    font-size: 20px;
+    color: #09090a;
+    font-weight: 700;
+}
+/* ================= CTA ================= */
+.cta {
+  background: #1dbf73;
+  color: white;
+  text-align: center;
+  padding: 70px 20px;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+  background: #111827;
+  color: #9ca3af;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero {
+  background-color: transparent !important; /* Inherit the main page background */
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.2) !important; /* Lighter overlay */
+}
+
+.hero-content h1 {
+  color: #ffffff;
+}
+
+.hero-content p {
+  color: #f7f8f8;
+}

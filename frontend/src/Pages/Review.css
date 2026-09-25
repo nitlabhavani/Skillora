@@ -1,0 +1,198 @@
+/* Matching Dark Background from Booking */
+.reviews-page {
+  background-image: linear-gradient(rgba(10, 25, 41, 0.96), rgba(10, 25, 41, 0.96)), 
+                    url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  padding: 60px 20px;
+  color: #f1f5f9;
+}
+
+.reviews-container {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.reviews-header {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.subtitle {
+  color: #1dbf73;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 2px;
+  font-size: 0.75rem;
+}
+
+.reviews-header h1 {
+  font-size: 2.8rem;
+  font-weight: 900;
+  margin: 10px 0 20px 0;
+}
+
+.overall-rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  padding: 12px 30px;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.star-icon { color: #fbbf24; font-size: 1.5rem; }
+.rating-score { font-weight: 800; font-size: 1.3rem; }
+.review-count { color: #94a3b8; font-size: 0.95rem; }
+
+/* Review Cards */
+.review-card {
+  background:#19a463;
+  backdrop-filter: blur(20px);
+  padding: 35px;
+  border-radius: 25px;
+  margin-bottom: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.review-card:hover {
+  transform: translateY(-8px);
+  border-color: #1dbf73;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.review-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.reviewer-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.reviewer-avatar {
+  width: 50px;
+  height: 50px;
+  background: #1dbf73;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 1.3rem;
+  box-shadow: 0 4px 15px rgba(29, 191, 115, 0.3);
+}
+
+.review-date {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  margin: 2px 0 0 0;
+}
+
+.stars .star { color: rgba(255, 255, 255, 0.1); font-size: 1.2rem; }
+.stars .star.filled { color: #fbbf24; }
+
+.review-comment {
+  line-height: 1.8;
+  color: #cbd5e1;
+  font-style: italic;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+/* Comment Section */
+.add-review-session {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 40px;
+  border-radius: 25px;
+  margin-top: 60px;
+  text-align: left;
+}
+
+.add-review-session h3 {
+  color: #1dbf73;
+  margin-bottom: 25px;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.comment-form textarea {
+  width: 100%;
+  height: 120px;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 20px;
+  color: white;
+  font-size: 1rem;
+  resize: none;
+  margin-bottom: 25px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.comment-form textarea:focus { border-color: #1dbf73; background: rgba(0,0,0,0.5); }
+
+.submit-review-btn {
+  background: #1dbf73;
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 12px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.submit-review-btn:hover { background: #19a463; transform: translateY(-2px); }
+
+/* Footer Action */
+.review-footer {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.back-link, .book-bottom-btn {
+  padding: 18px 45px;
+  border-radius: 15px;
+  text-decoration: none;
+  font-weight: 800;
+  transition: 0.3s;
+}
+
+.back-link {
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.book-bottom-btn {
+  background: #1dbf73;
+  color: white;
+  box-shadow: 0 10px 25px rgba(29, 191, 115, 0.3);
+}
+
+.book-bottom-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(29, 191, 115, 0.5);
+}

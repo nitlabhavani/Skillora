@@ -1,0 +1,121 @@
+/* Animated Gradient Background for the whole page */
+.page-wrapper {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(-45deg, #0b1120, #1e272e, #0f3443, #0b1120);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.main-container {
+  display: flex;
+  width: 90%;
+  height: 85%;
+  max-width: 1200px;
+  background: rgba(255, 255, 255, 0.05); /* Slight glass look */
+  backdrop-filter: blur(10px);
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+/* LEFT SIDE ANIMATION */
+.left-side {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.float-img {
+  width: 85%;
+  border-radius: 20px;
+  animation: floatAnim 4s ease-in-out infinite;
+  box-shadow: 0 0 30px rgba(72, 219, 251, 0.3);
+}
+
+@keyframes floatAnim {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+/* RIGHT SIDE STYLING */
+.right-side {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Decorative Glow behind form */
+.bg-shape {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: #48dbfb;
+  filter: blur(80px);
+  opacity: 0.2;
+  z-index: 0;
+}
+
+.form-box {
+  position: relative;
+  z-index: 1;
+  width: 80%;
+  color: white;
+  text-align: center;
+}
+
+.form-box h2 { font-size: 2rem; margin-bottom: 10px; }
+.form-box p { color: #ccc; margin-bottom: 30px; }
+
+.input-field { margin-bottom: 20px; }
+
+.input-field input, .input-field select {
+  width: 100%;
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+
+  outline: none;
+  transition: 0.3s;
+}
+
+.input-field input::placeholder { color: #aaa; }
+
+.input-field input:focus {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #48dbfb;
+}
+
+.glow-button {
+  width: 100%;
+  padding: 15px;
+  background: #48dbfb;
+  color: #0b1120;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(72, 219, 251, 0.4);
+  transition: 0.3s;
+}
+
+.glow-button:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 25px rgba(72, 219, 251, 0.6);
+}

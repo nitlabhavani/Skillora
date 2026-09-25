@@ -1,0 +1,147 @@
+/* --- ANIMATED BACKGROUND OVERLAY --- */
+body {
+  margin: 0;
+  /* High-quality tech-related background image */
+  background-image: linear-gradient(rgba(10, 25, 41, 0.85), rgba(10, 25, 41, 0.85)), 
+                    url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Keeps image static while content scrolls */
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Page Container */
+.service-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+/* Updated Header for Dark Background */
+.service-header h1 {
+  font-size: 3rem;
+  color: #ffffff;
+  margin-bottom: 15px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.badge {
+  background: #1dbf73;
+  color: white;
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  display: inline-block;
+  box-shadow: 0 4px 15px rgba(29, 191, 115, 0.3);
+}
+
+/* Search Bar Update for Dark Theme */
+.search-wrapper {
+  margin: 40px auto;
+  max-width: 600px;
+}
+
+.hero-search-bar {
+  width: 100%;
+  padding: 20px 30px 20px 65px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  outline: none;
+}
+
+/* Grid Layout */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); 
+  gap: 30px;
+  margin-top: 50px;
+}
+
+/* Modernized "Glass" Cards */
+.service-card {
+  background: rgba(255, 255, 255, 0.08); /* Transparent glass effect */
+  backdrop-filter: blur(15px); /* Blurs the background image behind the card */
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  overflow: hidden;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-image {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  position: relative;
+}
+
+.service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+/* Blueish tint overlay on images to match the background */
+.service-image::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: linear-gradient(to bottom, transparent, rgba(10, 25, 41, 0.4));
+}
+
+.service-content {
+  padding: 30px;
+  text-align: left;
+}
+
+.service-content h3 {
+  margin: 0 0 12px 0;
+  color: #1dbf73;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.service-content p {
+  font-size: 1rem;
+  color: #ccd6f6; /* Light grey-blue for readability */
+  line-height: 1.7;
+}
+
+.explore-text {
+  color: #64ffda; /* Teal accent */
+  font-weight: 600;
+  margin-top: 20px;
+  display: block;
+}
+
+/* Hover Effects */
+.service-card:hover {
+  transform: translateY(-15px);
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(29, 191, 115, 0.4);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.service-card:hover img {
+  transform: scale(1.1) rotate(1deg);
+}
+
+/* No Results Message */
+.no-results {
+  color: #ffffff;
+  padding: 50px;
+  font-size: 1.2rem;
+  grid-column: 1 / -1;
+}
