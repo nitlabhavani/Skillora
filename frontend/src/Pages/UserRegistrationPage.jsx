@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import "./register.css";
 import { authService } from "../services/authService";
 
@@ -26,6 +27,11 @@ const UserRegistrationPage = () => {
   
   return (
     <div className="page-wrapper">
+      <div style={{ position: 'absolute', top: '24px', left: '30px', zIndex: 10 }}>
+        <Link to="/" className="back-btn-header" style={{ marginBottom: 0 }}>
+          ← Back to Home
+        </Link>
+      </div>
       <div className="main-container">
         <div className="left-side">
           <div className="animated-image-box">

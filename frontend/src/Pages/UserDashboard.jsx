@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import './UserDashboard.css';
 import { bookingService } from '../services/bookingService';
 
@@ -68,6 +69,12 @@ const UserDashboard = () => {
     <div className="user-mgmt-page">
       <div className="um-container">
         
+        <div style={{ marginBottom: '15px' }}>
+          <Link to="/" className="back-btn-header">
+            ← Back to Home
+          </Link>
+        </div>
+
         <header className="um-header">
           <div className="um-title">
             <h1>User Bookings</h1>

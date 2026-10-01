@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './Report.css';
 
 const Reports = () => {
@@ -24,6 +25,12 @@ const Reports = () => {
     <div className="admin-reports-page">
       <div className="admin-container">
         
+        <div style={{ marginBottom: '15px' }}>
+          <Link to="/" className="back-btn-header">
+            ← Back to Home
+          </Link>
+        </div>
+
         <header className="admin-header">
           <h1>Business Intelligence</h1>
           <p>Analytical oversight and performance reporting across all sectors</p>

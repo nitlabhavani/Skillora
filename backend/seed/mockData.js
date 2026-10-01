@@ -2,56 +2,86 @@ export const initialCategories = [
   {
     name: "Web Development",
     slug: "web-development",
+    serviceId: "1",
     desc: "Custom websites, high-performance web apps, and robust full-stack solutions.",
     image: "/web.jpeg"
   },
   {
     name: "Graphic Design",
     slug: "graphic-design",
+    serviceId: "2",
     desc: "Impactful logos, cohesive branding, and creative visual designs.",
     image: "/graphic.jpeg"
   },
   {
     name: "Digital Marketing",
     slug: "digital-marketing",
+    serviceId: "3",
     desc: "Data-driven SEO strategies, targeted ads, and social media growth.",
     image: "/digital.jpeg"
   },
   {
     name: "UI / UX Design",
     slug: "ui-ux-design",
+    serviceId: "4",
     desc: "User-centric designs with modern, intuitive interfaces for better conversion.",
     image: "/ui.jpeg"
   },
   {
     name: "Content Writing",
     slug: "content-writing",
+    serviceId: "5",
     desc: "Engaging blogs, high-converting copywriting, and technical documentation.",
     image: "/content.jpeg"
   },
   {
     name: "Mobile App Development",
     slug: "mobile-app-development",
+    serviceId: "6",
     desc: "Native and cross-platform Android & iOS application development.",
     image: "/mobile.jpeg"
   },
   {
     name: "Data & Analytics",
     slug: "data-analytics",
+    serviceId: "7",
     desc: "In-depth data analysis and interactive visualization to drive decisions.",
     image: "/data.jpeg"
   },
   {
     name: "Cyber Security",
     slug: "cyber-security",
+    serviceId: "8",
     desc: "Proactive security audits and protection for your digital assets.",
     image: "/cyber.jpeg"
   },
   {
     name: "Artificial Intelligence",
     slug: "ai-solutions",
+    serviceId: "9",
     desc: "Custom AI models, machine learning integration, and automation tools.",
     image: "/ai.jpeg" 
+  },
+  {
+    name: "Cloud & DevOps",
+    slug: "cloud-devops",
+    serviceId: "19",
+    desc: "Scalable AWS/Azure infrastructure, Kubernetes orchestration, and CI/CD pipelines.",
+    image: "/cloud.jpeg"
+  },
+  {
+    name: "Blockchain & Web3",
+    slug: "blockchain-web3",
+    serviceId: "21",
+    desc: "Smart contracts, decentralized dApps, Web3 integrations, and crypto security.",
+    image: "/blockchain.jpeg"
+  },
+  {
+    name: "Video & Motion Graphics",
+    slug: "video-motion",
+    serviceId: "23",
+    desc: "High-retention video editing, 3D motion design, YouTube production, and VFX.",
+    image: "/video.jpeg"
   }
 ];
 
@@ -177,7 +207,7 @@ export const initialServices = [
     id: "14",
     name: "Clara Bloom",
     role: "Conversion Copywriter",
-    profileImg: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400",
+    profileImg: "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?w=400",
     workImg: "/content.jpeg", 
     bio: "Clara writes words that sell. From email funnels to long-form sales pages, her copy is designed to trigger action. She combines psychological triggers with SEO best practices to ensure that your content not only ranks well but converts browsers into buyers.", 
     skills: ["Sales Copy", "SEO Writing", "Email Funnels"],
@@ -229,7 +259,7 @@ export const initialServices = [
     id: "16",
     name: "Sanjay Gupta",
     role: "Business Intelligence Analyst",
-    profileImg: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400",
+    profileImg: "https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?w=400",
     workImg: "/data.jpeg", 
     bio: "Sanjay focuses on the visualization of complex data. He creates intuitive dashboards that allow stakeholders to see real-time performance metrics at a glance. He specializes in cleaning messy data sets and building automated reporting pipelines.", 
     skills: ["Tableau", "PowerBI", "SQL", "ETL"],
@@ -242,7 +272,7 @@ export const initialServices = [
     id: "8",
     name: "Riley Steele",
     role: "Lead Security Auditor",
-    profileImg: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400",
+    profileImg: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400",
     workImg: "/cyber.jpeg", 
     bio: "Riley protects digital assets through proactive penetration testing and ethical hacking. He identifies vulnerabilities before they can be exploited, ensuring that enterprise infrastructure is hardened against modern cyber threats and ransomware attacks.", 
     skills: ["Pen-Testing", "Network Security", "Linux"],
@@ -255,7 +285,7 @@ export const initialServices = [
     id: "17",
     name: "Victor Stone",
     role: "Security Compliance Expert",
-    profileImg: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400",
+    profileImg: "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=400",
     workImg: "/cyber.jpeg", 
     bio: "Victor specializes in global security standards including GDPR, HIPAA, and SOC2. He builds the governance frameworks that keep companies legally protected and ensures that user data privacy is maintained at every level of the application stack.", 
     skills: ["Compliance", "Risk Mgmt", "ISO 27001"],
@@ -281,7 +311,7 @@ export const initialServices = [
     id: "18",
     name: "Dr. Leo H",
     role: "ML Research Scientist",
-    profileImg: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400",
+    profileImg: "https://images.unsplash.com/photo-1566492031773-4f4e44671857?w=400",
     workImg: "/ai.jpeg", 
     bio: "Dr. Leo focuses on computer vision and custom neural network optimization. He builds proprietary AI solutions for healthcare and automated manufacturing, ensuring that models are both mathematically accurate and production-ready.", 
     skills: ["PyTorch", "TensorFlow", "Computer Vision"],
@@ -289,6 +319,84 @@ export const initialServices = [
     hourlyRate: 180,
     group: "ai",
     categoryName: "Artificial Intelligence"
+  },
+  { 
+    id: "19",
+    name: "Dev Patel",
+    role: "Cloud Infrastructure Architect",
+    profileImg: "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=400",
+    workImg: "/cloud.jpeg", 
+    bio: "Dev designs rock-solid AWS and GCP multi-region architectures. He specializes in serverless orchestration, zero-downtime migrations, and Kubernetes cluster optimization.", 
+    skills: ["AWS", "Kubernetes", "Terraform", "Docker"],
+    rate: "$115/hr",
+    hourlyRate: 115,
+    group: "cloud",
+    categoryName: "Cloud & DevOps"
+  },
+  { 
+    id: "20",
+    name: "Rachel Evans",
+    role: "DevOps & CI/CD Automation Lead",
+    profileImg: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400",
+    workImg: "/cloud.jpeg", 
+    bio: "Rachel streamlines engineering velocity with enterprise-grade CI/CD pipelines, automated testing gates, and Prometheus/Grafana observability suites.", 
+    skills: ["GitHub Actions", "CI/CD", "Linux", "Grafana"],
+    rate: "$95/hr",
+    hourlyRate: 95,
+    group: "cloud",
+    categoryName: "Cloud & DevOps"
+  },
+  { 
+    id: "21",
+    name: "Carlos Mendez",
+    role: "Smart Contract & Web3 Engineer",
+    profileImg: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=400",
+    workImg: "/blockchain.jpeg", 
+    bio: "Carlos builds gas-optimized Solidity smart contracts, DeFi protocols, and decentralized applications with rigorous cryptographic audits.", 
+    skills: ["Solidity", "Ethers.js", "Web3.js", "Hardhat"],
+    rate: "$130/hr",
+    hourlyRate: 130,
+    group: "blockchain",
+    categoryName: "Blockchain & Web3"
+  },
+  { 
+    id: "22",
+    name: "Zoe Nakamura",
+    role: "DeFi & Tokenomics Strategist",
+    profileImg: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=400",
+    workImg: "/blockchain.jpeg", 
+    bio: "Zoe crafts decentralized governance mechanisms and token models with high security and seamless wallet integration experiences.", 
+    skills: ["Tokenomics", "Rust", "Solana", "DeFi"],
+    rate: "$125/hr",
+    hourlyRate: 125,
+    group: "blockchain",
+    categoryName: "Blockchain & Web3"
+  },
+  { 
+    id: "23",
+    name: "Lucas Silva",
+    role: "Lead Motion Designer & VFX Artist",
+    profileImg: "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=400",
+    workImg: "/video.jpeg", 
+    bio: "Lucas creates breathtaking 3D motion graphics, commercial brand animations, and high-converting video ads using Blender and After Effects.", 
+    skills: ["After Effects", "Blender", "Cinema4D", "Premiere Pro"],
+    rate: "$75/hr",
+    hourlyRate: 75,
+    group: "video",
+    categoryName: "Video & Motion Graphics"
+  },
+  { 
+    id: "24",
+    name: "Maya Lin",
+    role: "Commercial Video Editor & Colorist",
+    profileImg: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400",
+    workImg: "/video.jpeg", 
+    bio: "Maya specializes in dynamic, fast-paced video editing, DaVinci Resolve color grading, and high-retention social and corporate video campaigns.", 
+    skills: ["DaVinci Resolve", "Color Grading", "Sound Design", "VFX"],
+    rate: "$70/hr",
+    hourlyRate: 70,
+    group: "video",
+    categoryName: "Video & Motion Graphics"
   }
 ];
 

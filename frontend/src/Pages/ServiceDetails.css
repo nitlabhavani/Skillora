@@ -173,3 +173,94 @@
   box-shadow: 0 5px 15px rgba(29, 191, 115, 0.3);
   transform: translateY(-2px);
 }
+
+/* Service Scope & Deliverables */
+.service-scope-section, .delivery-process-section {
+  margin: 35px 0;
+  text-align: left;
+}
+
+.scope-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.scope-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 18px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  transition: all 0.3s ease;
+}
+
+.scope-card:hover {
+  background: rgba(29, 191, 115, 0.08);
+  border-color: rgba(29, 191, 115, 0.3);
+  transform: translateY(-2px);
+}
+
+.scope-icon {
+  font-size: 1.5rem;
+}
+
+.scope-card strong {
+  display: block;
+  font-size: 0.95rem;
+  color: #f8fafc;
+  margin-bottom: 4px;
+}
+
+.scope-card p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+/* 4-Step Process */
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.p-step {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  padding: 20px 16px;
+  position: relative;
+  text-align: left;
+}
+
+.step-num {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #1dbf73;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+}
+
+.p-step h4 {
+  margin: 0 0 8px 0;
+  font-size: 1rem;
+  color: #f1f5f9;
+}
+
+.p-step p {
+  margin: 0;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: #94a3b8;
+}

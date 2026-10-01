@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './Project.css';
 
 const Project = () => {
@@ -24,6 +25,12 @@ const Project = () => {
     <div className="admin-project-page">
       <div className="admin-container">
         
+        <div style={{ marginBottom: '15px' }}>
+          <Link to="/" className="back-btn-header">
+            ← Back to Home
+          </Link>
+        </div>
+
         <header className="admin-header">
           <h1>Project Ecosystem</h1>
           <p>Global oversight of all active and completed service contracts</p>

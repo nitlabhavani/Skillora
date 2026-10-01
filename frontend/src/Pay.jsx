@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './Pay.css';
 import { paymentService } from './services/paymentService';
 
@@ -39,6 +40,12 @@ const Pay = () => {
     <div className="admin-pay-page">
       <div className="pay-container">
         
+        <div style={{ textAlign: 'left', marginBottom: '15px' }}>
+          <Link to="/" className="back-btn-header">
+            ← Back to Home
+          </Link>
+        </div>
+
         {/* Header Section - Centered */}
         <header className="pay-header">
           <h1>Payment Transactions</h1>

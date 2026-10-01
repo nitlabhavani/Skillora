@@ -106,6 +106,25 @@ const Reviews = () => {
       { id: 904, user: "Future AI", rating: 5, comment: "Dr. Leo's expertise in neural networks helped us optimize our model.", date: "Jan 2026" },
       { id: 905, user: "Visionary", rating: 5, comment: "Top tier computer vision expert. Our object detection is now 99% accurate.", date: "Dec 2025" },
       { id: 906, user: "RobotX", rating: 5, comment: "Deep learning specialist with real-world production experience.", date: "Nov 2025" }
+    ],
+    "19": [
+      { id: 907, user: "CloudScale Inc", rating: 5, comment: "Dev migrated our entire multi-region AWS infrastructure with zero downtime. Exceptional architect.", date: "Feb 2026" },
+      { id: 908, user: "Nexa Tech", rating: 5, comment: "Kubernetes cluster is blazing fast and our cloud bill dropped 30%.", date: "Jan 2026" }
+    ],
+    "20": [
+      { id: 909, user: "DevFlow", rating: 5, comment: "Rachel automated our CI/CD pipelines. Deployment time went from 45 mins to 3 mins!", date: "Feb 2026" }
+    ],
+    "21": [
+      { id: 910, user: "CryptoLabs", rating: 5, comment: "Carlos wrote bulletproof smart contracts. Passed audit with zero high-severity issues.", date: "Jan 2026" }
+    ],
+    "22": [
+      { id: 911, user: "DeFi Prime", rating: 5, comment: "Zoe's tokenomics model gave our protocol high liquidity and strong governance stability.", date: "Feb 2026" }
+    ],
+    "23": [
+      { id: 912, user: "BrandVibe", rating: 5, comment: "Lucas made our product launch 3D video look like an Apple keynote. Outstanding visual effects!", date: "Feb 2026" }
+    ],
+    "24": [
+      { id: 913, user: "StudioX", rating: 5, comment: "Maya's editing and color grading transformed our raw footage into cinematic gold.", date: "Feb 2026" }
     ]
   };
 

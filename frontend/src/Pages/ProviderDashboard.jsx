@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './ProviderDashboard.css';
 import { bookingService } from '../services/bookingService';
 
@@ -50,21 +51,21 @@ const ProviderDashboard = () => {
   };
 
   const providers = [
-    { id: 1, name: "Alex Rivera", service: "Web Development" },
-    { id: 2, name: "Jordan Smith", service: "Web Development" },
-    { id: 3, name: "Sarah Jenkins", service: "Graphic Design" },
-    { id: 4, name: "Liam O'Connor", service: "Graphic Design" },
-    { id: 5, name: "Elena Rossi", service: "UI/Ux Design" },
-    { id: 6, name: "David Vark", service: "UI/Ux Design" },
-    { id: 7, name: "Dr. James Wilson", service: "Content Writing" },
-    { id: 8, name: "Klara Bloom", service: "Content Writing" },
-    { id: 9, name: "Maria Garcia", service: "Digital Marketing" },
-    { id: 10, name: "Anita Desai", service: "Digital Marketing" },
-    { id: 11, name: "Kenji Tanaka", service: "Mobile App Dev" },
-    { id: 12, name: "Mai Wong", service: "Mobile App Dev" },
-    { id: 13, name: "Riley Steele", service: "Cyber Security" },
-    { id: 14, name: "Victor Brown", service: "Cyber Security" },
-    { id: 15,name:"Sophia Alt", service: "AI Strategy" }
+    { id: 1, name: "Alex Rivera", service: "Full Stack Web Architecture" },
+    { id: 2, name: "Jordan Smith", service: "Interactive 3D Frontend" },
+    { id: 3, name: "Sarah Chen", service: "Brand Strategy & Identity" },
+    { id: 4, name: "Liam O'Connor", service: "Visual Identity & Vector Art" },
+    { id: 5, name: "Elena Rodriguez", service: "Product & Behavioral UX" },
+    { id: 6, name: "David Vark", service: "Landing Page & UI Systems" },
+    { id: 7, name: "James Wilson", service: "API Technical Documentation" },
+    { id: 8, name: "Clara Bloom", service: "Conversion Copywriting" },
+    { id: 9, name: "Marcus Thorne", service: "Data-Driven SEO & Growth" },
+    { id: 10, name: "Anita Desai", service: "Social Media Community Growth" },
+    { id: 11, name: "Kenji Sato", service: "Cross-Platform Flutter Apps" },
+    { id: 12, name: "Mia Wong", service: "Native iOS & SwiftUI" },
+    { id: 13, name: "Riley Steele", service: "Penetration Testing & Hardening" },
+    { id: 14, name: "Victor Stone", service: "SOC2 & GDPR Compliance" },
+    { id: 15, name: "Sophia Alt", service: "LLM & Generative AI Solutions" }
   ];
 
   const bookingData = {
@@ -166,6 +167,11 @@ const ProviderDashboard = () => {
       </div>
 
       <main className="dash-main-content">
+        <div style={{ marginBottom: '15px' }}>
+          <Link to="/" className="back-btn-header">
+            ← Back to Home
+          </Link>
+        </div>
         <header className="main-header">
           <div className="header-title">
             <h1>Customer Database</h1>

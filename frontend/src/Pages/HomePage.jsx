@@ -5,7 +5,9 @@ import heroVideo from "../assets/herovideo.mp4";
 import { authService } from "../services/authService";
 
 function HomePage() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(() => {
+    return localStorage.getItem('skillora_theme') === 'dark';
+  });
   const navigate = useNavigate();
   const currentUser = authService.getCurrentUser();
 
@@ -15,8 +17,14 @@ function HomePage() {
     window.location.reload();
   };
 
+  const handleThemeToggle = () => {
+    const newTheme = !darkMode;
+    setDarkMode(newTheme);
+    localStorage.setItem('skillora_theme', newTheme ? 'dark' : 'light');
+  };
+
   return (
-    <div className={`homepage ${darkMode ? "dark" : ""}`}>
+    <div className={`homepage ${darkMode ? "dark" : "light"}`}>
 
       {/* ================= NAVBAR ================= */}
       <header className="navbar">
@@ -39,8 +47,9 @@ function HomePage() {
               <input
                 type="checkbox"
                 checked={darkMode}
-                onChange={() => setDarkMode(!darkMode)}
+                onChange={handleThemeToggle}
               />
+              <span className="toggle-slider"></span>
             </label>
             <span className={darkMode ? "active" : ""}>Dark</span>
           </div>
@@ -142,9 +151,13 @@ function HomePage() {
             "Digital Marketing",
             "UI / UX Design",
             "Content Writing",
+            "Mobile App Development",
             "Data & Analytics",
             "Cyber Security",
-            "Artificial Intelligence"
+            "Artificial Intelligence",
+            "Cloud & DevOps",
+            "Blockchain & Web3",
+            "Video & Motion Graphics"
           ].map((item) => (
             <div key={item} className="category-card">
               <h3>{item}</h3>
