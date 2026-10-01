@@ -107,8 +107,6 @@ const UserProfile = () => {
         </div>
         <nav className="nav-links">
           <Link to="/" className="no-link-style">HOME</Link>
-          <Link to="/services" className="no-link-style">SERVICES</Link>
-          <Link to="/about" className="no-link-style">ABOUT</Link>
           <Link to="/services" className="no-link-style">
             <button className="btn-nav-book">⚡ Book Services</button>
           </Link>

@@ -20,11 +20,13 @@ import MyOrders from "./Pages/MyOrders";
 import Pay from "./Pay";
 import Project from "./Project";
 import Reports from "./Report";
+import SkilloraAIAssistant from "./components/SkilloraAIAssistant";
 
 function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
+      <SkilloraAIAssistant />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
