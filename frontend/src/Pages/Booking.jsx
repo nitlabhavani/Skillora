@@ -85,10 +85,12 @@ const Booking = () => {
     try {
       await bookingService.create({
         userName: currentUser?.name || "Customer",
-        userEmail: deliveryEmail,
+        userEmail: deliveryEmail || currentUser?.email || "",
+        userId: currentUser?.id || currentUser?._id || "",
         providerId: id,
         providerName: user.name,
         service: user.role,
+        workImg: user.workImg || "/web.jpeg",
         amount: `$${totalAmount}`,
         details: projectDetails,
         deliveryFormat,

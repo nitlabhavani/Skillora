@@ -76,11 +76,15 @@ const Payment = () => {
         </div>
 
         <div className="action-buttons">
-          <Link to="/services" className="primary-btn">Browse More Services</Link>
+          <Link to="/user-profile" className="primary-btn" style={{ background: 'linear-gradient(135deg, #1dbf73, #10b981)' }}>
+            📁 View My Booked Services
+          </Link>
+          <Link to="/services" className="secondary-btn">
+            Browse More Services
+          </Link>
           <button onClick={handleCancelRequest} className="cancel-payment-btn">
             Cancel & Refund Booking
           </button>
-          <Link to="/" className="secondary-btn">Go to Dashboard</Link>
         </div>
       </div>
     </div>

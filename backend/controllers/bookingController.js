@@ -10,7 +10,7 @@ export const getBookings = async (req, res) => {
   try {
     let bookings = [];
     try {
-      bookings = await Booking.find({});
+      bookings = await Booking.find({}).sort({ createdAt: -1 });
     } catch {
       // Fallback to in-memory
     }
@@ -19,20 +19,27 @@ export const getBookings = async (req, res) => {
       bookings = inMemoryBookings;
     }
 
-    const { search, status, userName } = req.query;
+    const { search, status, userName, userEmail, userId } = req.query;
     let filtered = [...bookings];
+
+    if (userName || userEmail || userId) {
+      filtered = filtered.filter(b => {
+        const matchesName = userName && b.userName?.toLowerCase() === userName.toLowerCase();
+        const matchesEmail = userEmail && b.userEmail?.toLowerCase() === userEmail.toLowerCase();
+        const matchesId = userId && (b.userId === userId || String(b.userId) === String(userId));
+        return matchesName || matchesEmail || matchesId;
+      });
+    }
 
     if (search) {
       filtered = filtered.filter(b =>
         b.userName?.toLowerCase().includes(search.toLowerCase()) ||
-        b.service?.toLowerCase().includes(search.toLowerCase())
+        b.service?.toLowerCase().includes(search.toLowerCase()) ||
+        b.providerName?.toLowerCase().includes(search.toLowerCase())
       );
     }
-    if (status) {
+    if (status && status !== 'all') {
       filtered = filtered.filter(b => b.status?.toLowerCase() === status.toLowerCase());
-    }
-    if (userName) {
-      filtered = filtered.filter(b => b.userName?.toLowerCase() === userName.toLowerCase());
     }
 
     // Calculate total revenue
@@ -57,22 +64,26 @@ export const getBookings = async (req, res) => {
 // @access  Public
 export const createBooking = async (req, res) => {
   try {
-    const { userName, userEmail, providerId, providerName, service, amount, details, status } = req.body;
+    const { userName, userEmail, userId, providerId, providerName, service, amount, details, deliveryFormat, workImg, status } = req.body;
 
-    const newId = 'u' + (Date.now() % 10000);
+    const newId = 'BK-' + (Date.now().toString().slice(-6));
     const newBookingObj = {
       id: newId,
       bookingId: newId,
+      userId: userId || null,
       userName: userName || 'Customer',
       userEmail: userEmail || '',
       providerId: String(providerId || ''),
       providerName: providerName || '',
       service: service || 'Custom Service',
+      workImg: workImg || '',
+      deliveryFormat: deliveryFormat || 'ZIP Source Code Package',
       amount: typeof amount === 'number' ? `$${amount.toFixed(2)}` : (amount || '$100.00'),
       rawAmount: typeof amount === 'number' ? amount : parseFloat(String(amount || '0').replace(/[^0-9.]/g, '')),
       details: details || '',
       date: new Date().toLocaleDateString('en-US', { month: 'short', day: '2-digit', year: 'numeric' }),
-      status: status || 'Active'
+      status: status || 'Active',
+      createdAt: new Date()
     };
 
     try {

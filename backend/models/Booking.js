@@ -30,6 +30,14 @@ const bookingSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  workImg: {
+    type: String,
+    default: ''
+  },
+  deliveryFormat: {
+    type: String,
+    default: 'ZIP Source Code Package'
+  },
   amount: {
     type: String,
     required: true
